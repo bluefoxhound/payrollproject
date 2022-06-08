@@ -8,4 +8,9 @@ class Site extends BaseController
     {
         return view('site/page/home');
     }
+
+    public function login()
+    {
+        return view('site/page/login');
+    }
 }

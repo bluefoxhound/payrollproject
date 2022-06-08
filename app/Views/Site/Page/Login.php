@@ -3,6 +3,14 @@
 <?php $this->section('content') ?>
 <h2>Payroll Project</h2>
 <img src="<?php echo base_url('resource/img/main/sample1.png?'.time()); ?>" alt="">
+<form>
+    <label for="email">Email</label>
+    <input type="text" name="email" placeholder="Email">
+    <label for="password">Password</label>
+    <input type="password" name="password" placeholder="Password">
+    <button class="login-btn">Login</button>
+    <a href="<?php echo base_url('dashboard'); ?>">Login</a>
+</form>
 <button class="preloader-btn">Preloader</button>
 <?php
     $db = db_connect();
