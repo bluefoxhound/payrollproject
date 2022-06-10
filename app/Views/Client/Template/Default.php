@@ -15,6 +15,9 @@
         <ul class="navbar">
             <li>
                 <a href=""><i class="fa-solid fa-bars"></i></a>
+                <a>
+                    <input type="text" name="search" placeholder="Search...">
+                </a>
                 <a href="<?php echo base_url('dashboard'); ?>"><i class="fa-solid fa-house-user"></i></a>
                 <a href=""><i class="fa-regular fa-message"></i></a>
                 <a href=""><i class="fa-solid fa-bell"></i></a>
@@ -33,9 +36,92 @@
         </ul>
     </div>
 
-    <div class="content">
-        <?php $this->renderSection('content') ?>
+    <div style="position: relative;">
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-user-group"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="">
+                    <i class="fa-regular fa-address-card"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="">
+                    <i class="fa-regular fa-calendar"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="">
+                    <i class="fa-regular fa-copy"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="">
+                    <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="">
+                    <i class="fa-regular fa-image"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-power-off"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <?php $this->renderSection('content') ?>
+        </div>
     </div>
+    
 
     <div class="preloader">
         <div class="preloader-screen">

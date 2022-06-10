@@ -1,6 +1,7 @@
-html,body,p,div,h1,h2,h3,ul,li,button{
+html,body,p,div,h1,h2,h3,h4,h5,h6,ul,li,input,button{
     margin: 0px;
     padding: 0px;
+    border: 0px;
 }
 html, body{
     color: rgba(33, 37, 41, 1);
@@ -36,9 +37,15 @@ html, body{
     text-decoration: none;
     font-size: 13px ;
 }
+.header .navbar li a:nth-child(2){
+    padding: 0px;
+}
 .header .navbar li a:hover{
     background-color: #ffffff;
     color: #6199ff;
+}
+.header .navbar li a:nth-child(2) input{
+    padding: 10.5px 15px;
 }
 
 .header .menu li a{
@@ -60,9 +67,29 @@ html, body{
     height: 36px;
 }
 
+.sidebar{
+    position: fixed;
+    top: 80;
+    left: 0;
+    height: 100%;
+    width: auto;
+    background-color: #6199ff;
+}
+.sidebar ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 10.5px;
+}
+.sidebar ul li a:hover{
+    background-color: #ffffff;
+    color: #6199ff;
+}
+
 .content{
     position: relative;
     z-index: 1;
+    margin-left: 50px;
 }
 
 .preloader{
