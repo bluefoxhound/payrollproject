@@ -40,6 +40,10 @@ $routes->get('/site/login', 'Site::login');
 
 $routes->get('/dashboard', 'Dashboard::index');
 
+$routes->get('/account', 'Account::index');
+
+$routes->get('/payroll', 'Payroll::index');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

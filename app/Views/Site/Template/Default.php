@@ -12,9 +12,11 @@
 </head>
 <body class="page" data-url="<?php echo base_url(); ?>">
     <div class="header">
-        <ul>
+        <ul class="navbar">
             <li>
                 <a href="<?php echo base_url(); ?>">Home</a>
+            </li>
+            <li>
                 <a href="<?php echo base_url('site/login'); ?>">Login</a>
             </li>
         </ul>

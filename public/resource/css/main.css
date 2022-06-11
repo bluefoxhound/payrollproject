@@ -1,7 +1,10 @@
-html,body,p,div,h1,h2,h3,h4,h5,h6,ul,li,input,button{
+html,body,p,div,h1,h2,h3,h4,h5,h6,ul,li,form,input,select,option,button{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 16px;
     margin: 0px;
     padding: 0px;
     border: 0px;
+    color: #444;
 }
 html, body{
     color: rgba(33, 37, 41, 1);
@@ -14,17 +17,18 @@ html, body{
 }
 
 .header{
-    background-color: #6199ff;
+    background-color: #3498db;
     overflow: hidden;
 }
 .header .navbar{
     overflow: hidden;
     float: left;
+    width: 60%;
 }
 .header .menu{
     overflow: hidden;
     float: right;
-    width: 200px;
+    width: 40%;
 }
 .header ul li{
     list-style-type: none;
@@ -37,15 +41,10 @@ html, body{
     text-decoration: none;
     font-size: 13px ;
 }
-.header .navbar li a:nth-child(2){
-    padding: 0px;
-}
+
 .header .navbar li a:hover{
     background-color: #ffffff;
-    color: #6199ff;
-}
-.header .navbar li a:nth-child(2) input{
-    padding: 10.5px 15px;
+    color: #3498db;
 }
 
 .header .menu li a{
@@ -58,7 +57,7 @@ html, body{
 }
 .header .menu li a:hover{
     background-color: #ffffff;
-    color: #6199ff;
+    color: #3498db;
 }
 .header .menu li img{
     float: right;
@@ -73,7 +72,7 @@ html, body{
     left: 0;
     height: 100%;
     width: auto;
-    background-color: #6199ff;
+    background-color: #3498db;
 }
 .sidebar ul li a{
     color: #ffffff;
@@ -83,13 +82,19 @@ html, body{
 }
 .sidebar ul li a:hover{
     background-color: #ffffff;
-    color: #6199ff;
+    color: #3498db;
+}
+
+.sidebar ul li .active{
+    background-color: #ffffff;
+    color: #3498db;
 }
 
 .content{
     position: relative;
     z-index: 1;
-    margin-left: 50px;
+    background-color: #fff;
+    padding: 10px;
 }
 
 .preloader{
@@ -114,7 +119,7 @@ html, body{
     left: 50%;
     /* transform:translateX(-50%); */
     transform:translate(-50%,-80%);
-    background-color: #6199ff;
+    background-color: #3498db;
     margin: 100px auto;
     width: 200px;
     height: 100px;
@@ -138,4 +143,19 @@ html, body{
     height: 100px;
     margin: 0px auto;
     display:block;
+}
+
+form input[type="text"],
+form input[type="password"],
+form select{
+    background-color: #eee;
+    padding: 10px;
+    width: 300px;
+}
+form button{
+    background-color: #6199ff;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
 }

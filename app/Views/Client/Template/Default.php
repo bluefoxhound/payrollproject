@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payroll Project</title>
     <link rel="stylesheet" href="<?php echo base_url('resource/css/main.css?'.time()); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('resource/css/client.css?'.time()); ?>">
     <link rel="icon" href="<?php echo base_url('favicon.ico?'.time()); ?>" />
     <script src="https://kit.fontawesome.com/b2dc49f891.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -15,11 +16,19 @@
         <ul class="navbar">
             <li>
                 <a href=""><i class="fa-solid fa-bars"></i></a>
+            </li>
+            <li>
                 <a>
                     <input type="text" name="search" placeholder="Search...">
                 </a>
+            </li>
+            <li>
                 <a href="<?php echo base_url('dashboard'); ?>"><i class="fa-solid fa-house-user"></i></a>
+            </li>
+            <li>
                 <a href=""><i class="fa-regular fa-message"></i></a>
+            </li>
+            <li>
                 <a href=""><i class="fa-solid fa-bell"></i></a>
                 
             </li>
@@ -40,75 +49,60 @@
         <div class="sidebar">
             <ul>
                 <li>
-                    <a href="">
+                    <a href="<?php echo base_url('dashboard'); ?>">
                         <i class="fa-solid fa-house"></i>
                     </a>
                 </li>
-            </ul>
-            <ul>
                 <li>
-                    <a href="">
+                    <a href="<?php echo base_url('account'); ?>">
                         <i class="fa-solid fa-user-group"></i>
                     </a>
                 </li>
-            </ul>
-            <ul>
+                <li>
+                    <a href="<?php echo base_url('payroll'); ?>">
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                    </a>
+                </li>
                 <li>
                     <a href="">
                     <i class="fa-regular fa-address-card"></i>
                     </a>
                 </li>
-            </ul>
-            <ul>
                 <li>
                     <a href="">
                     <i class="fa-regular fa-calendar"></i>
                     </a>
                 </li>
-            </ul>
-            <ul>
                 <li>
                     <a href="">
                     <i class="fa-solid fa-pen-to-square"></i>
                     </a>
                 </li>
-            </ul>
-            <ul>
                 <li>
                     <a href="">
                     <i class="fa-solid fa-cart-shopping"></i>
                     </a>
                 </li>
-            </ul>
-            <ul>
                 <li>
                     <a href="">
                     <i class="fa-regular fa-copy"></i>
                     </a>
                 </li>
-            </ul>
-            <ul>
                 <li>
                     <a href="">
                     <i class="fa-solid fa-envelope"></i>
                     </a>
                 </li>
-            </ul>
-            <ul>
                 <li>
                     <a href="">
                     <i class="fa-regular fa-image"></i>
                     </a>
                 </li>
-            </ul>
-            <ul>
                 <li>
                     <a href="">
                         <i class="fa-solid fa-chart-line"></i>
                     </a>
                 </li>
-            </ul>
-            <ul>
                 <li>
                     <a href="">
                         <i class="fa-solid fa-power-off"></i>
@@ -159,6 +153,20 @@
     </div>
 
     <?php $this->renderSection('javascript') ?>
+    <script>
+        $(document).ready(function(){
+            var page = window.location.pathname;
+            var link = page.substr(1,page.length);
+            var val = 1;
+            
+            if (link=='dashboard')val = 1;
+            if (link=='account')val = 2;
+            if (link=='payroll')val = 3;
+
+            var elem2 = document.querySelector('.sidebar ul li:nth-child('+val+') a');
+            elem2.classList.add('active');
+        });
+    </script>
 
 </body>
 </html>

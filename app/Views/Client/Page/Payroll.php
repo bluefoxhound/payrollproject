@@ -1,27 +1,9 @@
-<?php $this->extend('site/template/default') ?>
+<?php $this->extend('client/template/default') ?>
 
 <?php $this->section('content') ?>
-<p style="color: #666;font-size: 25px;font-weight: 300;">Sign In</p>
-<br>
-<form action="">
-    <label for="email">Email</label>
-    <br>
-    <input type="text" name="email" placeholder="Email">
-    <br>
+<!-- <h3>Dashboard</h3> -->
+<p style="color: #666;font-size: 25px;font-weight: 300;">Payroll</p>
 
-    <label for="password">Password:</label>
-    <br>
-    <input type="password" name="password" placeholder="Password">
-    <br>
-    <input type="checkbox"> Remember Me.
-    <br>
-    <br>
-    <button type="button" class="preloader-btn">Login</button>
-    
-    <br>
-    <br>
-    <a href="">Forgot password?</a>
-</form>
 <?php
     $db = db_connect();
     $builder = $db->table('user_tb');
