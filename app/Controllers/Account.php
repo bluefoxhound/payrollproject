@@ -1,12 +1,16 @@
 <?php
+    namespace App\Controllers;
+    use CodeIgniter\RESTful\ResourceController;
+    use CodeIgniter\API\ResponseTrait;
+    use App\Models\AccountModel;
 
-namespace App\Controllers;
+    class Account extends ResourceController{
+        use ResponseTrait;
 
-class Account extends BaseController
-{
-    public function index()
-    {
-        return view('client/page/account');
+        public function index(){
+            $model = new AccountModel();
+            $data['user_tb'] = $model->orderBy('uid','DESC')->findAll();
+            return $this->respond($data);
+        }
     }
-
-}
+?>

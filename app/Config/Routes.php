@@ -38,9 +38,12 @@ $routes->set404Override();
 $routes->get('/', 'Site::index');
 $routes->get('/site/login', 'Site::login');
 
+$routes->get('/admin', 'Admin::index');
+$routes->get('/admin/account', 'Admin::account');
+
 $routes->get('/dashboard', 'Dashboard::index');
 
-$routes->get('/account', 'Account::index');
+$routes->resource('account');
 
 $routes->get('/payroll', 'Payroll::index');
 

@@ -23,7 +23,7 @@
                 </a>
             </li>
             <li>
-                <a href="<?php echo base_url('dashboard'); ?>"><i class="fa-solid fa-house-user"></i></a>
+                <a href="<?php echo base_url('admin'); ?>"><i class="fa-solid fa-house-user"></i></a>
             </li>
             <li>
                 <a href=""><i class="fa-regular fa-message"></i></a>
@@ -49,12 +49,12 @@
         <div class="sidebar">
             <ul>
                 <li>
-                    <a href="<?php echo base_url('dashboard'); ?>">
+                    <a href="<?php echo base_url('admin'); ?>">
                         <i class="fa-solid fa-house"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url('account'); ?>">
+                    <a href="<?php echo base_url('admin/account'); ?>">
                         <i class="fa-solid fa-user-group"></i>
                     </a>
                 </li>
@@ -158,9 +158,11 @@
             var page = window.location.pathname;
             var link = page.substr(1,page.length);
             var val = 1;
+
+            // alert(link);
             
-            if (link=='dashboard')val = 1;
-            if (link=='account')val = 2;
+            if (link=='admin')val = 1;
+            if (link=='admin/account')val = 2;
             if (link=='payroll')val = 3;
 
             var elem2 = document.querySelector('.sidebar ul li:nth-child('+val+') a');
